@@ -4,6 +4,9 @@ import "fmt"
 
 func searchRange(nums []int, target int) []int {
 	result := []int{-1, -1}
+	if len(nums) == 0 {
+		return result
+	}
 	l, r := 0, len(nums)-1
 	for l < r {
 		m := (l + r) / 2
